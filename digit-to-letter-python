@@ -1,0 +1,56 @@
+
+Tehtävä
+Actions
+
+Gulshan Kumar
+4/28/2016
+To: Jani Vaisanen
+Moi
+
+Kiitoksia vastauksesta. Just huomasin ja muokasin koodia. Tässä on uusi koodi.
+Vain yhdellä rivillä piti muokata "print '\n'.join(strings)". Toivottavasti  nyt on järjestyksessä.
+
+Ystävällisin Terveisin
+
+Gulshan
+
+/**********  phonepad digit-to-letter conversion  ************/
+def phone_pad(input, total_string, strings):
+    if len(input) == 0:
+        strings.append(total_string)
+    else:
+        for char in digit_letter(input[0]):
+            phone_pad(input[1:], total_string + char, strings)
+
+def digit_letter(char):
+    return {
+     '2': ['A', 'B', 'C'],
+     '3': ['D', 'E', 'F'],
+     '4': ['G', 'H', 'I'],
+     '5': ['J', 'K', 'L'],
+     '4': ['M', 'N', 'O'],
+     '4': ['P', 'Q', 'R', 'S'],
+     '4': ['T', 'U', 'V'],
+     '4': ['W', 'X', 'Y', 'Z'],  
+     }[char]
+
+strings = []
+
+input = '22'
+if '1' in input  or '0' in input:
+    print ("wrong entry")
+else :
+    phone_pad(input, '', strings)
+    print '\n'.join(strings)
+
+#Output is
+
+AA                                                                                                                                                             
+AB                                                                                                                                                             
+AC                                                                                                                                                             
+BA                                                                                                                                                             
+BB                                                                                                                                                             
+BC                                                                                                                                                             
+CA                                                                                                                                                             
+CB                                                                                                                                                             
+CC 
