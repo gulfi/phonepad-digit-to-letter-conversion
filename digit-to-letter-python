@@ -1,19 +1,4 @@
 
-Tehtävä
-Actions
-
-Gulshan Kumar
-4/28/2016
-To: Jani Vaisanen
-Moi
-
-Kiitoksia vastauksesta. Just huomasin ja muokasin koodia. Tässä on uusi koodi.
-Vain yhdellä rivillä piti muokata "print '\n'.join(strings)". Toivottavasti  nyt on järjestyksessä.
-
-Ystävällisin Terveisin
-
-Gulshan
-
 /**********  phonepad digit-to-letter conversion  ************/
 def phone_pad(input, total_string, strings):
     if len(input) == 0:
